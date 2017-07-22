@@ -25,7 +25,7 @@
                  [secretary "1.2.3"]])
 
 (require '[adzerk.boot-cljs              :refer [cljs]]
-         '[adzerk.boot-cljs-repl         :refer [cljs-repl]]
+         '[adzerk.boot-cljs-repl         :refer [cljs-repl start-repl]]
          '[powerlaces.boot-figreload     :refer [reload]]
          '[powerlaces.boot-cljs-devtools :refer [dirac cljs-devtools]]
          '[pandeiro.boot-http            :refer [serve]])

@@ -7,11 +7,12 @@
 (reg-event-fx
  :initialise-db
  []
- (fn [{:keys [db]} _]     
+ (fn [{:keys [db]} _]
    {:db default-value}))
 
 (reg-event-db
- :set-showing
+ :set-watching
  []
  (fn [db [_ new-filter-kw]]
-   (assoc db :showing new-filter-kw)))
+   (assoc db :watching new-filter-kw)))
+ 

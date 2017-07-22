@@ -13,7 +13,7 @@
 
 (enable-console-print!)
 
-(defroute "/" [] (dispatch [:set-showing :all]))
+(defroute "/" [] (dispatch [:set-watching :none]))
 
 (def history
   (doto (History.)
@@ -25,5 +25,7 @@
   []
   (dispatch-sync [:initialise-db])
   (reagent/render [beast-whatch-app]
-                  (.getElementById js/document "app")
-                  #_(dommy/sel1 "#app")))
+                  (dommy/sel1 "#app")))
+
+
+

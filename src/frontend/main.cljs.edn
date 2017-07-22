@@ -1,0 +1,3 @@
+{:require  [beast-watch.core]
+ :boot-reload {:on-jsload beast-watch.core/main}}
+

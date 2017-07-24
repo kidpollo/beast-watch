@@ -93,7 +93,8 @@
   []
   (let [tags (subscribe [:tags])
         detection-areas (subscribe [:detection-areas])
-        beasts (subscribe [:beasts])] 
+        beasts (subscribe [:beasts])
+        watching (subscribe [:watching])] 
     (fn []
       [:div
        [:section#beastapp {:class "hero is-info"}
@@ -101,7 +102,7 @@
          [:div.container {:class "has-text-centered"}
           [:h1.title "Beast Watch"]
           [:h2.subtitle
-           "Currently watched beast name"]]]
+           (:name @watching)]]]
         [:div.hero-body 
          [:div.container
           [:div.columns

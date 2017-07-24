@@ -22,7 +22,8 @@
                  [prismatic/dommy "1.1.0"]
                  [reagent "0.6.0-rc"]
                  [re-frame "0.9.4"]
-                 [secretary "1.2.3"]])
+                 [secretary "1.2.3"]
+                 [cljsjs/d3 "4.3.0-5"]])
 
 (require '[adzerk.boot-cljs              :refer [cljs]]
          '[adzerk.boot-cljs-repl         :refer [cljs-repl start-repl]]
@@ -33,6 +34,7 @@
 (deftask dev [D with-dirac bool "Enable Dirac Devtools."]
   (comp (serve :dir "resources/")
      (watch)
+     (notify)
      (cljs-devtools)
      (reload)
      (if-not with-dirac

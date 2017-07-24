@@ -7,7 +7,8 @@
             [beast-watch.events]
             [beast-watch.subs]
             [beast-watch.views :refer [beast-whatch-app]]
-            [secretary.core :as secretary])
+            [secretary.core :as secretary] 
+            [cljsjs.d3])
   (:import [goog History]
            [goog.history EventType]))
 
@@ -27,5 +28,11 @@
   (reagent/render [beast-whatch-app]
                   (dommy/sel1 "#app")))
 
+(defn dispatch-timer-event
+  []
+  (dispatch [:tick]))
+
+(main)
+(defonce do-timer (js/setInterval dispatch-timer-event 16))
 
 

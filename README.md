@@ -1,0 +1,3 @@
+# beast-watch
+
+`boot dev`
